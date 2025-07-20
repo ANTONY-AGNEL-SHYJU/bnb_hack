@@ -1,0 +1,111 @@
+{
+  "products": [
+    {
+      "productId": "001",
+      "userId": 3,
+      "userEmail": "ashutoshaianule@gmail.com",
+      "batchName": "biscuit_001",
+      "manufacturerName": "Swapnil",
+      "productType": "Food & Beverage",
+      "description": "Biscuit powered by Parley ",
+      "fileHash": "28133d80cc88b72c0d5a2acdea5ae17b305e14ea0f9618d5191cae707c8e1512",
+      "greenfieldUrl": "gnfd://bnb/001-1752937360.pdf",
+      "txHash": "0xe19dcf0b37ef90691bf6be538bf26156b76fbb55b55f3263524c8bd629364f6b",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "createdAt": "2025-07-19T20:32:41.171013",
+      "metadata": {
+        "fileName": "BNB_Kerala.pdf",
+        "fileSize": 869575,
+        "mimeType": "application/pdf",
+        "uploadedBy": 3,
+        "uploadedAt": "2025-07-19T20:32:41.096674"
+      }
+    },
+    {
+      "productId": "001",
+      "userId": 3,
+      "userEmail": "ashutoshaianule@gmail.com",
+      "batchName": "biscuit_001",
+      "manufacturerName": "Swapnil",
+      "productType": "Food & Beverage",
+      "description": "Biscuit Poweered by Parlae",
+      "fileHash": "28133d80cc88b72c0d5a2acdea5ae17b305e14ea0f9618d5191cae707c8e1512",
+      "greenfieldUrl": "gnfd://bnb/001-1752940580.pdf",
+      "txHash": "0xe19dcf0b37ef90691bf6be538bf26156b76fbb55b55f3263524c8bd629364f6b",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "createdAt": "2025-07-19T21:27:26.541177",
+      "metadata": {
+        "fileName": "BNB_Kerala.pdf",
+        "fileSize": 869575,
+        "mimeType": "application/pdf",
+        "uploadedBy": 3,
+        "uploadedAt": "2025-07-19T21:27:26.539822"
+      }
+    },
+    {
+      "productId": "002",
+      "userId": 3,
+      "userEmail": "ashutoshaianule@gmail.com",
+      "batchName": "biscuit ",
+      "manufacturerName": "Ashutosh",
+      "productType": "Food & Beverage",
+      "description": "Biscuit powerd by orio ",
+      "fileHash": "28133d80cc88b72c0d5a2acdea5ae17b305e14ea0f9618d5191cae707c8e1512",
+      "greenfieldUrl": "gnfd://bnb/002-1752979539.pdf",
+      "txHash": "0xd8f52d8220f71a9d70613210cb0f4ab384cf2ac2aa8b3d86d2614013c4a50e0e",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "createdAt": "2025-07-20T08:15:57.779503",
+      "metadata": {
+        "fileName": "BNB_Kerala.pdf",
+        "fileSize": 869575,
+        "mimeType": "application/pdf",
+        "uploadedBy": 3,
+        "uploadedAt": "2025-07-20T08:15:57.767501"
+      }
+    },
+    {
+      "productId": "003",
+      "userId": 3,
+      "userEmail": "ashutoshaianule@gmail.com",
+      "batchName": "nike",
+      "manufacturerName": "Ashutosh",
+      "productType": "Other",
+      "description": "Shoe brand ",
+      "fileHash": "28133d80cc88b72c0d5a2acdea5ae17b305e14ea0f9618d5191cae707c8e1512",
+      "greenfieldUrl": "gnfd://bnb/003-1752980232.pdf",
+      "txHash": "0x18fc5f8dff6b0c34ce6e9bea48ec24cdbee3d5703db6f5f58770c17bb5130a10",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "createdAt": "2025-07-20T08:27:27.167172",
+      "metadata": {
+        "fileName": "BNB_Kerala.pdf",
+        "fileSize": 869575,
+        "mimeType": "application/pdf",
+        "uploadedBy": 3,
+        "uploadedAt": "2025-07-20T08:27:27.158171"
+      }
+    },
+    {
+      "productId": "1010",
+      "userId": 3,
+      "userEmail": "ashutoshaianule@gmail.com",
+      "batchName": "nike_01",
+      "manufacturerName": "Ashutosh",
+      "productType": "Other",
+      "description": "it is a shoe",
+      "fileHash": "28133d80cc88b72c0d5a2acdea5ae17b305e14ea0f9618d5191cae707c8e1512",
+      "greenfieldUrl": "gnfd://bnb/1010-1752980854.pdf",
+      "txHash": "0x63a4d5b43d58da9844093f32ea874712744f15823fec4add5346777b246ee553",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "createdAt": "2025-07-20T08:37:45.956101",
+      "metadata": {
+        "fileName": "BNB_Kerala.pdf",
+        "fileSize": 869575,
+        "mimeType": "application/pdf",
+        "uploadedBy": 3,
+        "uploadedAt": "2025-07-20T08:37:45.915442"
+      }
+    }
+  ],
+  "metadata": [],
+  "lastProductId": 5
+}

@@ -1,0 +1,203 @@
+{
+  "sessions": [
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-19T12:34:48.886301",
+      "lastActivity": "2025-07-19T12:34:48.886301"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-19T12:35:17.141285",
+      "lastActivity": "2025-07-19T12:35:17.141285"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-19T12:44:47.624703",
+      "lastActivity": "2025-07-19T12:44:47.624703"
+    },
+    {
+      "userId": 4,
+      "email": "test@example.com",
+      "loginTime": "2025-07-19T12:51:48.991094",
+      "lastActivity": "2025-07-19T12:51:48.992099"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-19T12:52:39.145627",
+      "lastActivity": "2025-07-19T12:52:39.145627"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-19T12:55:47.547495",
+      "lastActivity": "2025-07-19T12:55:47.547495"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-19T12:57:25.182032",
+      "lastActivity": "2025-07-19T12:57:25.182032"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-19T13:01:29.940174",
+      "lastActivity": "2025-07-19T13:01:29.940174"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-19T19:27:54.163757",
+      "lastActivity": "2025-07-19T19:27:54.163757"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-19T19:30:16.573212",
+      "lastActivity": "2025-07-19T19:30:16.573212"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-19T19:32:21.878488",
+      "lastActivity": "2025-07-19T19:32:21.878488"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-19T19:34:17.805307",
+      "lastActivity": "2025-07-19T19:34:17.805307"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-19T19:46:22.987588",
+      "lastActivity": "2025-07-19T19:46:22.987588"
+    },
+    {
+      "userId": 5,
+      "email": "official7997@gmail.com",
+      "loginTime": "2025-07-19T21:32:17.298989",
+      "lastActivity": "2025-07-19T21:32:17.298989"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-19T21:35:05.605847",
+      "lastActivity": "2025-07-19T21:35:05.605847"
+    },
+    {
+      "userId": 5,
+      "email": "official7997@gmail.com",
+      "loginTime": "2025-07-19T22:07:45.009347",
+      "lastActivity": "2025-07-19T22:07:45.009347"
+    },
+    {
+      "userId": 6,
+      "email": "samyak@gmail.com",
+      "loginTime": "2025-07-19T22:10:32.822795",
+      "lastActivity": "2025-07-19T22:10:32.822795"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-19T22:21:47.410183",
+      "lastActivity": "2025-07-19T22:21:47.410183"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-20T04:56:51.237616",
+      "lastActivity": "2025-07-20T04:56:51.237616"
+    },
+    {
+      "userId": 5,
+      "email": "official7997@gmail.com",
+      "loginTime": "2025-07-20T05:01:21.253783",
+      "lastActivity": "2025-07-20T05:01:21.253783"
+    },
+    {
+      "userId": 6,
+      "email": "samyak@gmail.com",
+      "loginTime": "2025-07-20T05:02:23.636976",
+      "lastActivity": "2025-07-20T05:02:23.636976"
+    },
+    {
+      "userId": 5,
+      "email": "official7997@gmail.com",
+      "loginTime": "2025-07-20T05:11:22.933929",
+      "lastActivity": "2025-07-20T05:11:22.933929"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-20T06:11:20.953095",
+      "lastActivity": "2025-07-20T06:11:20.953095"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-20T07:09:30.325242",
+      "lastActivity": "2025-07-20T07:09:30.325242"
+    },
+    {
+      "userId": 5,
+      "email": "official7997@gmail.com",
+      "loginTime": "2025-07-20T07:11:24.485752",
+      "lastActivity": "2025-07-20T07:11:24.485752"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-20T08:09:11.878116",
+      "lastActivity": "2025-07-20T08:09:11.878116"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-20T08:14:25.942355",
+      "lastActivity": "2025-07-20T08:14:25.942355"
+    },
+    {
+      "userId": 5,
+      "email": "official7997@gmail.com",
+      "loginTime": "2025-07-20T08:18:05.615756",
+      "lastActivity": "2025-07-20T08:18:05.615756"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-20T08:23:29.792878",
+      "lastActivity": "2025-07-20T08:23:29.792878"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-20T08:26:09.228922",
+      "lastActivity": "2025-07-20T08:26:09.228922"
+    },
+    {
+      "userId": 5,
+      "email": "official7997@gmail.com",
+      "loginTime": "2025-07-20T08:28:56.210110",
+      "lastActivity": "2025-07-20T08:28:56.210110"
+    },
+    {
+      "userId": 3,
+      "email": "ashutoshaianule@gmail.com",
+      "loginTime": "2025-07-20T08:36:36.811284",
+      "lastActivity": "2025-07-20T08:36:36.811284"
+    },
+    {
+      "userId": 5,
+      "email": "official7997@gmail.com",
+      "loginTime": "2025-07-20T08:38:59.790305",
+      "lastActivity": "2025-07-20T08:38:59.790305"
+    }
+  ],
+  "lastSessionId": 0
+}
