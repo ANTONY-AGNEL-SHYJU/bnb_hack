@@ -49,7 +49,46 @@
       "scannerUsername": "5",
       "timestamp": "2025-07-20T08:40:28.004998",
       "location": "Unknown"
+    },
+    {
+      "id": "5",
+      "batchId": "0008",
+      "supplierName": "Sid",
+      "supplierLocation": "Kochi",
+      "scanType": "QR_SCAN",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "userId": null,
+      "scannerUsername": "6",
+      "timestamp": "2025-08-01T06:18:26.673694",
+      "location": "Unknown"
+    },
+    {
+      "id": "6",
+      "batchId": "27",
+      "supplierName": "Ashutosh",
+      "supplierLocation": "Pune",
+      "scanType": "QR_SCAN",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "userId": null,
+      "scannerUsername": "6",
+      "timestamp": "2025-08-04T04:33:11.408982",
+      "location": "Unknown"
+    },
+    {
+      "id": "7",
+      "batchId": "009",
+      "supplierName": "siddi",
+      "supplierLocation": "Nagpur",
+      "scanType": "QR_SCAN",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "userId": null,
+      "scannerUsername": "6",
+      "timestamp": "2025-08-04T06:32:20.142724",
+      "location": "Unknown"
     }
   ],
-  "lastScanId": 4
+  "lastScanId": 7
 }

@@ -10,7 +10,7 @@
       "companyName": "TechCorp Industries",
       "verified": true,
       "createdAt": "2025-07-19T11:59:39.793Z",
-      "lastLogin": null,
+      "lastLogin": "2025-08-07T14:05:08.853733",
       "blockchainHashes": [],
       "profileData": {
         "totalBatches": 0,
@@ -46,7 +46,7 @@
       "companyName": "Xinetee",
       "verified": true,
       "createdAt": "2025-07-19T12:34:31.824682",
-      "lastLogin": "2025-07-20T08:36:36.796397",
+      "lastLogin": "2025-08-05T13:30:41.517682",
       "blockchainHashes": [
         {
           "batchId": "001",
@@ -92,10 +92,46 @@
           "blockNumber": null,
           "productName": "nike_01",
           "timestamp": "2025-07-20T08:37:45.959125"
+        },
+        {
+          "batchId": "007",
+          "fileHash": "d377bb18a9c4c8cccbde1f1c224e5c440bb1107d43c73d19eb2a80278412335d",
+          "txHash": "0xc423396f750cf75c4d98d470efc0f54176bbca855f3d1cec4a45a3dfafa3964d",
+          "contractAddress": "0x0000000000000000000000000000000000000000",
+          "blockNumber": null,
+          "productName": "Raymond_1",
+          "timestamp": "2025-08-01T06:10:20.864814"
+        },
+        {
+          "batchId": "0008",
+          "fileHash": "ddd65aa73ec3cc5b487c50edf2c44752a0453d9a7fecfb816d588fec88635add",
+          "txHash": "0x66bc0e8fd3625d668902444363bbe9a377d8547bdae95debabe10a80ebaa6db5",
+          "contractAddress": "0x0000000000000000000000000000000000000000",
+          "blockNumber": null,
+          "productName": "Maggi_1",
+          "timestamp": "2025-08-01T06:12:07.363819"
+        },
+        {
+          "batchId": "27",
+          "fileHash": "d377bb18a9c4c8cccbde1f1c224e5c440bb1107d43c73d19eb2a80278412335d",
+          "txHash": "0x210f7f6e55f0891b96429c314582126a80151e175a1f0936989d5b15298cc541",
+          "contractAddress": "0x0000000000000000000000000000000000000000",
+          "blockNumber": null,
+          "productName": "biscuit_002",
+          "timestamp": "2025-08-04T04:29:12.570725"
+        },
+        {
+          "batchId": "009",
+          "fileHash": "d377bb18a9c4c8cccbde1f1c224e5c440bb1107d43c73d19eb2a80278412335d",
+          "txHash": "0x7f57166d61a96d61d06e8a9f24e3fb576b4dfdc1a0cac20309e63750ce751ce2",
+          "contractAddress": "0x0000000000000000000000000000000000000000",
+          "blockNumber": null,
+          "productName": "Maggi_6",
+          "timestamp": "2025-08-04T06:28:20.938914"
         }
       ],
       "profileData": {
-        "totalBatches": 5,
+        "totalBatches": 9,
         "totalScans": 0,
         "joinedAt": "2025-07-19T12:34:31.824682"
       }
@@ -146,7 +182,7 @@
       "companyName": "ndsn",
       "verified": true,
       "createdAt": "2025-07-19T22:10:15.626118",
-      "lastLogin": "2025-07-20T05:02:23.630761",
+      "lastLogin": "2025-08-04T06:31:27.304326",
       "blockchainHashes": [],
       "profileData": {
         "totalBatches": 0,

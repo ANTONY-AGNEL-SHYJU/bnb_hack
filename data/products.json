@@ -104,8 +104,92 @@
         "uploadedBy": 3,
         "uploadedAt": "2025-07-20T08:37:45.915442"
       }
+    },
+    {
+      "productId": "007",
+      "userId": 3,
+      "userEmail": "ashutoshaianule@gmail.com",
+      "batchName": "Raymond_1",
+      "manufacturerName": "Ashutosh",
+      "productType": "Textiles",
+      "description": "it is a cloth brand for costomer ",
+      "fileHash": "d377bb18a9c4c8cccbde1f1c224e5c440bb1107d43c73d19eb2a80278412335d",
+      "greenfieldUrl": "gnfd://bnbhack/007-1754008688.pdf",
+      "txHash": "0xc423396f750cf75c4d98d470efc0f54176bbca855f3d1cec4a45a3dfafa3964d",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "createdAt": "2025-08-01T06:10:20.852472",
+      "metadata": {
+        "fileName": "Sap_info.pdf.pdf",
+        "fileSize": 10030290,
+        "mimeType": "application/pdf",
+        "uploadedBy": 3,
+        "uploadedAt": "2025-08-01T06:10:20.846400"
+      }
+    },
+    {
+      "productId": "0008",
+      "userId": 3,
+      "userEmail": "ashutoshaianule@gmail.com",
+      "batchName": "Maggi_1",
+      "manufacturerName": "Swapnil",
+      "productType": "Food & Beverage",
+      "description": "It is edible ",
+      "fileHash": "ddd65aa73ec3cc5b487c50edf2c44752a0453d9a7fecfb816d588fec88635add",
+      "greenfieldUrl": "gnfd://bnbhack/0008-1754008921.pdf",
+      "txHash": "0x66bc0e8fd3625d668902444363bbe9a377d8547bdae95debabe10a80ebaa6db5",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "createdAt": "2025-08-01T06:12:07.359081",
+      "metadata": {
+        "fileName": "hiro-marker.pdf",
+        "fileSize": 1572,
+        "mimeType": "application/pdf",
+        "uploadedBy": 3,
+        "uploadedAt": "2025-08-01T06:12:07.352665"
+      }
+    },
+    {
+      "productId": "27",
+      "userId": 3,
+      "userEmail": "ashutoshaianule@gmail.com",
+      "batchName": "biscuit_002",
+      "manufacturerName": "Swapnil",
+      "productType": "Food & Beverage",
+      "description": "It can be eat",
+      "fileHash": "d377bb18a9c4c8cccbde1f1c224e5c440bb1107d43c73d19eb2a80278412335d",
+      "greenfieldUrl": "gnfd://bnbhack/27-1754261821.pdf",
+      "txHash": "0x210f7f6e55f0891b96429c314582126a80151e175a1f0936989d5b15298cc541",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "createdAt": "2025-08-04T04:29:12.564062",
+      "metadata": {
+        "fileName": "Sap_info.pdf.pdf",
+        "fileSize": 10030290,
+        "mimeType": "application/pdf",
+        "uploadedBy": 3,
+        "uploadedAt": "2025-08-04T04:29:12.561756"
+      }
+    },
+    {
+      "productId": "009",
+      "userId": 3,
+      "userEmail": "ashutoshaianule@gmail.com",
+      "batchName": "Maggi_6",
+      "manufacturerName": "Puysh",
+      "productType": "Food & Beverage",
+      "description": "It is edible ",
+      "fileHash": "d377bb18a9c4c8cccbde1f1c224e5c440bb1107d43c73d19eb2a80278412335d",
+      "greenfieldUrl": "gnfd://bnbhack/009-1754268967.pdf",
+      "txHash": "0x7f57166d61a96d61d06e8a9f24e3fb576b4dfdc1a0cac20309e63750ce751ce2",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "createdAt": "2025-08-04T06:28:20.921798",
+      "metadata": {
+        "fileName": "Sap_info.pdf.pdf",
+        "fileSize": 10030290,
+        "mimeType": "application/pdf",
+        "uploadedBy": 3,
+        "uploadedAt": "2025-08-04T06:28:20.824141"
+      }
     }
   ],
   "metadata": [],
-  "lastProductId": 5
+  "lastProductId": 9
 }

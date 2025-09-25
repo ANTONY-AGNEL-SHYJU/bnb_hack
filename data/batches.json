@@ -201,7 +201,169 @@
         "uploadedBy": 3,
         "uploadedAt": "2025-07-20T08:37:45.915442"
       }
+    },
+    {
+      "manufacturerId": "ashutosh",
+      "manufacturerName": "Ashutosh",
+      "batchName": "Raymond_1",
+      "productType": "Textiles",
+      "description": "it is a cloth brand for costomer ",
+      "fileHash": "d377bb18a9c4c8cccbde1f1c224e5c440bb1107d43c73d19eb2a80278412335d",
+      "greenfieldUrl": "gnfd://bnbhack/007-1754008688.pdf",
+      "txHash": "0xc423396f750cf75c4d98d470efc0f54176bbca855f3d1cec4a45a3dfafa3964d",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "documentUrl": "gnfd://bnbhack/007-1754008688.pdf",
+      "userId": 3,
+      "userEmail": "ashutoshaianule@gmail.com",
+      "fileName": "Sap_info.pdf.pdf",
+      "fileSize": 10030290,
+      "mimeType": "application/pdf",
+      "uploadTimestamp": "2025-08-01T06:10:20.844298",
+      "batchId": "007",
+      "createdAt": "2025-08-01T06:10:20.846400",
+      "scans": [],
+      "status": "active",
+      "lastActivity": "2025-08-01T06:10:20.846400",
+      "metadata": {
+        "fileName": "Sap_info.pdf.pdf",
+        "fileSize": 10030290,
+        "mimeType": "application/pdf",
+        "uploadedBy": 3,
+        "uploadedAt": "2025-08-01T06:10:20.846400"
+      }
+    },
+    {
+      "manufacturerId": "swapnil",
+      "manufacturerName": "Swapnil",
+      "batchName": "Maggi_1",
+      "productType": "Food & Beverage",
+      "description": "It is edible ",
+      "fileHash": "ddd65aa73ec3cc5b487c50edf2c44752a0453d9a7fecfb816d588fec88635add",
+      "greenfieldUrl": "gnfd://bnbhack/0008-1754008921.pdf",
+      "txHash": "0x66bc0e8fd3625d668902444363bbe9a377d8547bdae95debabe10a80ebaa6db5",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "documentUrl": "gnfd://bnbhack/0008-1754008921.pdf",
+      "userId": 3,
+      "userEmail": "ashutoshaianule@gmail.com",
+      "fileName": "hiro-marker.pdf",
+      "fileSize": 1572,
+      "mimeType": "application/pdf",
+      "uploadTimestamp": "2025-08-01T06:12:07.352665",
+      "batchId": "0008",
+      "createdAt": "2025-08-01T06:12:07.352665",
+      "scans": [
+        {
+          "id": "5",
+          "batchId": "0008",
+          "supplierName": "Sid",
+          "supplierLocation": "Kochi",
+          "scanType": "QR_SCAN",
+          "ipAddress": "127.0.0.1",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+          "userId": null,
+          "scannerUsername": "6",
+          "timestamp": "2025-08-01T06:18:26.673694",
+          "location": "Unknown"
+        }
+      ],
+      "status": "active",
+      "lastActivity": "2025-08-01T06:18:26.673694",
+      "metadata": {
+        "fileName": "hiro-marker.pdf",
+        "fileSize": 1572,
+        "mimeType": "application/pdf",
+        "uploadedBy": 3,
+        "uploadedAt": "2025-08-01T06:12:07.352665"
+      }
+    },
+    {
+      "manufacturerId": "swapnil",
+      "manufacturerName": "Swapnil",
+      "batchName": "biscuit_002",
+      "productType": "Food & Beverage",
+      "description": "It can be eat",
+      "fileHash": "d377bb18a9c4c8cccbde1f1c224e5c440bb1107d43c73d19eb2a80278412335d",
+      "greenfieldUrl": "gnfd://bnbhack/27-1754261821.pdf",
+      "txHash": "0x210f7f6e55f0891b96429c314582126a80151e175a1f0936989d5b15298cc541",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "documentUrl": "gnfd://bnbhack/27-1754261821.pdf",
+      "userId": 3,
+      "userEmail": "ashutoshaianule@gmail.com",
+      "fileName": "Sap_info.pdf.pdf",
+      "fileSize": 10030290,
+      "mimeType": "application/pdf",
+      "uploadTimestamp": "2025-08-04T04:29:12.561756",
+      "batchId": "27",
+      "createdAt": "2025-08-04T04:29:12.561756",
+      "scans": [
+        {
+          "id": "6",
+          "batchId": "27",
+          "supplierName": "Ashutosh",
+          "supplierLocation": "Pune",
+          "scanType": "QR_SCAN",
+          "ipAddress": "127.0.0.1",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+          "userId": null,
+          "scannerUsername": "6",
+          "timestamp": "2025-08-04T04:33:11.408982",
+          "location": "Unknown"
+        }
+      ],
+      "status": "active",
+      "lastActivity": "2025-08-04T04:33:11.408982",
+      "metadata": {
+        "fileName": "Sap_info.pdf.pdf",
+        "fileSize": 10030290,
+        "mimeType": "application/pdf",
+        "uploadedBy": 3,
+        "uploadedAt": "2025-08-04T04:29:12.561756"
+      }
+    },
+    {
+      "manufacturerId": "puysh",
+      "manufacturerName": "Puysh",
+      "batchName": "Maggi_6",
+      "productType": "Food & Beverage",
+      "description": "It is edible ",
+      "fileHash": "d377bb18a9c4c8cccbde1f1c224e5c440bb1107d43c73d19eb2a80278412335d",
+      "greenfieldUrl": "gnfd://bnbhack/009-1754268967.pdf",
+      "txHash": "0x7f57166d61a96d61d06e8a9f24e3fb576b4dfdc1a0cac20309e63750ce751ce2",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "documentUrl": "gnfd://bnbhack/009-1754268967.pdf",
+      "userId": 3,
+      "userEmail": "ashutoshaianule@gmail.com",
+      "fileName": "Sap_info.pdf.pdf",
+      "fileSize": 10030290,
+      "mimeType": "application/pdf",
+      "uploadTimestamp": "2025-08-04T06:28:20.737593",
+      "batchId": "009",
+      "createdAt": "2025-08-04T06:28:20.824141",
+      "scans": [
+        {
+          "id": "7",
+          "batchId": "009",
+          "supplierName": "siddi",
+          "supplierLocation": "Nagpur",
+          "scanType": "QR_SCAN",
+          "ipAddress": "127.0.0.1",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+          "userId": null,
+          "scannerUsername": "6",
+          "timestamp": "2025-08-04T06:32:20.142724",
+          "location": "Unknown"
+        }
+      ],
+      "status": "active",
+      "lastActivity": "2025-08-04T06:32:20.142724",
+      "metadata": {
+        "fileName": "Sap_info.pdf.pdf",
+        "fileSize": 10030290,
+        "mimeType": "application/pdf",
+        "uploadedBy": 3,
+        "uploadedAt": "2025-08-04T06:28:20.824141"
+      }
     }
   ],
-  "lastBatchId": 5
+  "lastBatchId": 9
 }
