@@ -114,7 +114,20 @@
       "scannerUsername": "1",
       "timestamp": "2025-09-25T20:38:50.453219",
       "location": "Unknown"
+    },
+    {
+      "id": "10",
+      "batchId": "Batch 56",
+      "supplierName": "Supplier 90",
+      "supplierLocation": "Bangalore",
+      "scanType": "QR_SCAN",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+      "userId": null,
+      "scannerUsername": "2",
+      "timestamp": "2025-09-25T22:54:15.856445",
+      "location": "Unknown"
     }
   ],
-  "lastScanId": 9
+  "lastScanId": 10
 }

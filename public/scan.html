@@ -443,6 +443,14 @@
                 document.getElementById('supplierForm').style.display = 'block';
                 document.getElementById('manualEntryForm').style.display = 'none';
                 
+                // Smooth scroll to supplier form with delay
+                setTimeout(() => {
+                    document.getElementById('supplierForm').scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                }, 300);
+                
             } catch (error) {
                 console.error('QR processing error:', error);
                 showAlert('danger', 'Invalid QR code format: ' + error.message);
