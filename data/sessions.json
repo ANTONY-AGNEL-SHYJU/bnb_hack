@@ -301,6 +301,42 @@
       "email": "techmanofficial123@gmail.com",
       "loginTime": "2025-09-25T19:40:13.187155",
       "lastActivity": "2025-09-25T19:40:13.187162"
+    },
+    {
+      "userId": 7,
+      "email": "techmanofficial123@gmail.com",
+      "loginTime": "2025-09-25T19:51:13.765892",
+      "lastActivity": "2025-09-25T19:51:13.765896"
+    },
+    {
+      "userId": 1,
+      "email": "manufacturer@techcorp.com",
+      "loginTime": "2025-09-25T19:55:25.983175",
+      "lastActivity": "2025-09-25T19:55:25.983179"
+    },
+    {
+      "userId": 1,
+      "email": "manufacturer@techcorp.com",
+      "loginTime": "2025-09-25T19:56:13.251548",
+      "lastActivity": "2025-09-25T19:56:13.251552"
+    },
+    {
+      "userId": 2,
+      "email": "supplier@logistics.com",
+      "loginTime": "2025-09-25T20:33:04.300368",
+      "lastActivity": "2025-09-25T20:33:04.300373"
+    },
+    {
+      "userId": 1,
+      "email": "manufacturer@techcorp.com",
+      "loginTime": "2025-09-25T20:33:32.315571",
+      "lastActivity": "2025-09-25T20:33:32.315576"
+    },
+    {
+      "userId": 2,
+      "email": "supplier@logistics.com",
+      "loginTime": "2025-09-25T22:37:38.913411",
+      "lastActivity": "2025-09-25T22:37:38.913415"
     }
   ],
   "lastSessionId": 1

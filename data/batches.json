@@ -363,7 +363,124 @@
         "uploadedBy": 3,
         "uploadedAt": "2025-08-04T06:28:20.824141"
       }
+    },
+    {
+      "manufacturerId": "abc_company",
+      "manufacturerName": "ABC Company",
+      "batchName": "Batch-1",
+      "productType": "Pharmaceuticals",
+      "description": "Smthng",
+      "fileHash": "1cd77c1e34108988ff696202a4741c4c50ab0d8de287d4a904ef0dd6063ccfd2",
+      "greenfieldUrl": "gnfd://bnbhack1/123456-1758810887.pdf",
+      "txHash": "0x879ffce341b9fa51971bd42aeeb77fdd58ca2e4a013bdaa12b1ab856f815f5f3",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "documentUrl": "gnfd://bnbhack1/123456-1758810887.pdf",
+      "userId": 1,
+      "userEmail": "manufacturer@techcorp.com",
+      "fileName": "DSLD E-2.pdf",
+      "fileSize": 4919713,
+      "mimeType": "application/pdf",
+      "uploadTimestamp": "2025-09-25T20:05:03.124163",
+      "batchId": "123456",
+      "createdAt": "2025-09-25T20:05:03.124285",
+      "scans": [
+        {
+          "id": "8",
+          "batchId": "123456",
+          "supplierName": "Supplier 1",
+          "supplierLocation": "Kochi",
+          "scanType": "QR_SCAN",
+          "ipAddress": "10.124.202.65",
+          "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Mobile Safari/537.36",
+          "userId": null,
+          "scannerUsername": "1",
+          "timestamp": "2025-09-25T20:06:35.424366",
+          "location": "Unknown"
+        },
+        {
+          "id": "9",
+          "batchId": "123456",
+          "supplierName": "Ashutosh",
+          "supplierLocation": "Kochi",
+          "scanType": "QR_SCAN",
+          "ipAddress": "10.124.202.65",
+          "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Mobile Safari/537.36",
+          "userId": null,
+          "scannerUsername": "1",
+          "timestamp": "2025-09-25T20:38:50.453219",
+          "location": "Unknown"
+        }
+      ],
+      "status": "active",
+      "lastActivity": "2025-09-25T20:38:50.453228",
+      "metadata": {
+        "fileName": "DSLD E-2.pdf",
+        "fileSize": 4919713,
+        "mimeType": "application/pdf",
+        "uploadedBy": 1,
+        "uploadedAt": "2025-09-25T20:05:03.124292"
+      }
+    },
+    {
+      "manufacturerId": "abc_company",
+      "manufacturerName": "ABC Company",
+      "batchName": "Batch-2",
+      "productType": "Pharmaceuticals",
+      "description": "abcd",
+      "fileHash": "f0097bc4e1bbe69bd90a70005b7de96112d971e6a2f4d1a9c14893d5c0ebde17",
+      "greenfieldUrl": "gnfd://bnbhack1/123456-1758812665.pdf",
+      "txHash": "0x166c43eca48de716061eb9c6a98ecf3489dfa819e6bfa9598b6ada0bc4d3fe5f",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "documentUrl": "gnfd://bnbhack1/123456-1758812665.pdf",
+      "userId": 1,
+      "userEmail": "manufacturer@techcorp.com",
+      "fileName": "DSL E1 record .pdf",
+      "fileSize": 4519590,
+      "mimeType": "application/pdf",
+      "uploadTimestamp": "2025-09-25T20:34:45.269080",
+      "batchId": "123456",
+      "createdAt": "2025-09-25T20:34:45.269195",
+      "scans": [],
+      "status": "active",
+      "lastActivity": "2025-09-25T20:34:45.269198",
+      "metadata": {
+        "fileName": "DSL E1 record .pdf",
+        "fileSize": 4519590,
+        "mimeType": "application/pdf",
+        "uploadedBy": 1,
+        "uploadedAt": "2025-09-25T20:34:45.269201"
+      }
+    },
+    {
+      "manufacturerId": "abc_company",
+      "manufacturerName": "ABC Company",
+      "batchName": "Batch-4",
+      "productType": "Food & Beverage",
+      "description": "HGVVGHVGH",
+      "fileHash": "a767b94536abd0053bc50de6aaa527d2f1fa519ce8a92eacee4b6d6d26c9e120",
+      "greenfieldUrl": "gnfd://bnbhack1/123456-1758814671.pdf",
+      "txHash": "0x99c9255e8d4cfac768c2d884a82d31a1c5df02990437cc5efeeed46c37d97386",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "documentUrl": "gnfd://bnbhack1/123456-1758814671.pdf",
+      "userId": 1,
+      "userEmail": "manufacturer@techcorp.com",
+      "fileName": "SparkTank_Event_Concept.pdf",
+      "fileSize": 3477,
+      "mimeType": "application/pdf",
+      "uploadTimestamp": "2025-09-25T21:07:56.126978",
+      "batchId": "123456",
+      "createdAt": "2025-09-25T21:07:56.127103",
+      "scans": [],
+      "status": "active",
+      "lastActivity": "2025-09-25T21:07:56.127107",
+      "metadata": {
+        "fileName": "SparkTank_Event_Concept.pdf",
+        "fileSize": 3477,
+        "mimeType": "application/pdf",
+        "uploadedBy": 1,
+        "uploadedAt": "2025-09-25T21:07:56.127110"
+      }
     }
   ],
-  "lastBatchId": 9
+  "lastBatchId": 12
 }

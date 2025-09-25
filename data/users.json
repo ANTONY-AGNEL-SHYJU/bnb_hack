@@ -10,10 +10,38 @@
       "companyName": "TechCorp Industries",
       "verified": true,
       "createdAt": "2025-07-19T11:59:39.793Z",
-      "lastLogin": "2025-09-25T13:15:33.873387",
-      "blockchainHashes": [],
+      "lastLogin": "2025-09-25T20:33:32.314981",
+      "blockchainHashes": [
+        {
+          "batchId": "123456",
+          "fileHash": "1cd77c1e34108988ff696202a4741c4c50ab0d8de287d4a904ef0dd6063ccfd2",
+          "txHash": "0x879ffce341b9fa51971bd42aeeb77fdd58ca2e4a013bdaa12b1ab856f815f5f3",
+          "contractAddress": "0x0000000000000000000000000000000000000000",
+          "blockNumber": null,
+          "productName": "Batch-1",
+          "timestamp": "2025-09-25T20:05:03.125337"
+        },
+        {
+          "batchId": "123456",
+          "fileHash": "f0097bc4e1bbe69bd90a70005b7de96112d971e6a2f4d1a9c14893d5c0ebde17",
+          "txHash": "0x166c43eca48de716061eb9c6a98ecf3489dfa819e6bfa9598b6ada0bc4d3fe5f",
+          "contractAddress": "0x0000000000000000000000000000000000000000",
+          "blockNumber": null,
+          "productName": "Batch-2",
+          "timestamp": "2025-09-25T20:34:45.270289"
+        },
+        {
+          "batchId": "123456",
+          "fileHash": "a767b94536abd0053bc50de6aaa527d2f1fa519ce8a92eacee4b6d6d26c9e120",
+          "txHash": "0x99c9255e8d4cfac768c2d884a82d31a1c5df02990437cc5efeeed46c37d97386",
+          "contractAddress": "0x0000000000000000000000000000000000000000",
+          "blockNumber": null,
+          "productName": "Batch-4",
+          "timestamp": "2025-09-25T21:07:56.128159"
+        }
+      ],
       "profileData": {
-        "totalBatches": 0,
+        "totalBatches": 3,
         "totalScans": 0,
         "joinedAt": "2025-07-19T11:59:39.793Z"
       }
@@ -28,7 +56,7 @@
       "companyName": "Global Logistics Inc",
       "verified": true,
       "createdAt": "2025-07-19T11:59:40.055Z",
-      "lastLogin": null,
+      "lastLogin": "2025-09-25T22:37:38.912838",
       "blockchainHashes": [],
       "profileData": {
         "totalBatches": 0,
@@ -200,7 +228,7 @@
       "companyName": "ABC Company pvt ltd",
       "verified": true,
       "createdAt": "2025-09-25T19:39:52.581869",
-      "lastLogin": "2025-09-25T19:40:13.186597",
+      "lastLogin": "2025-09-25T19:51:13.765378",
       "blockchainHashes": [],
       "profileData": {
         "totalBatches": 0,

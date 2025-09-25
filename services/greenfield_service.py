@@ -8,11 +8,15 @@ from datetime import datetime
 
 class GreenfieldService:
     def __init__(self):
-        # Configuration
-        self.endpoint = os.getenv('GREENFIELD_RPC_URL', 'https://gnfd-testnet-fullnode-tendermint-us.bnbchain.org')
-        self.bucket_name = os.getenv('GREENFIELD_BUCKET_NAME', 'bnbhack')
+        # Configuration from environment variables
+        self.greenfield_rpc = os.getenv('GREENFIELD_RPC', os.getenv('GREENFIELD_RPC_URL', 'https://gnfd-testnet-fullnode-tendermint-us.bnbchain.org'))
+        self.bucket_id = os.getenv('BUCKET_ID', os.getenv('GREENFIELD_BUCKET_NAME', 'bnbhack1'))
+        self.private_key = os.getenv('PRIVATE_KEY', os.getenv('GREENFIELD_ACCOUNT_PRIVATE_KEY', ''))
         self.account_address = os.getenv('GREENFIELD_ACCOUNT_ADDRESS', '')
-        self.private_key = os.getenv('GREENFIELD_ACCOUNT_PRIVATE_KEY', '')
+        
+        # Legacy support
+        self.endpoint = self.greenfield_rpc
+        self.bucket_name = self.bucket_id
         
         # Storage Provider endpoints for testnet
         self.sp_endpoints = [
@@ -26,11 +30,12 @@ class GreenfieldService:
         ]
         self.primary_sp = self.sp_endpoints[0]
         
-        # Enable real mode if account is configured
-        self.mode = 'real' if self.account_address and self.private_key else 'mock'
+        # Use mock mode (real mode requires complex cryptographic signing)
+        self.mode = 'mock'
         
         print(f"Greenfield Service initialized:")
-        print(f"  Bucket: {self.bucket_name}")
+        print(f"  RPC: {self.greenfield_rpc}")
+        print(f"  Bucket: {self.bucket_id}")
         print(f"  Mode: {self.mode}")
         print(f"  Testing connection...")
         
@@ -58,19 +63,49 @@ class GreenfieldService:
     def _check_bucket_status(self):
         """Check if bucket exists and is accessible"""
         try:
-            # Query bucket info via Storage Provider
-            bucket_url = f"{self.primary_sp}/greenfield/storage/v1/bucket-meta/{self.bucket_name}"
-            response = requests.get(bucket_url, timeout=10)
-            
-            if response.status_code == 200:
-                print(f"   Bucket '{self.bucket_name}' is accessible")
-            elif response.status_code == 404:
-                print(f"   Bucket '{self.bucket_name}' not found - may need creation")
-            else:
-                print(f"   Bucket status unclear: {response.status_code}")
-                
+            # Skip bucket check - assume bucket exists
+            print(f"   Assuming bucket '{self.bucket_name}' exists")
         except Exception as e:
             print(f"   Could not check bucket: {e}")
+    
+    def _create_bucket(self):
+        """Create bucket on BNB Greenfield"""
+        try:
+            print(f"   Creating bucket: {self.bucket_name}")
+            
+            # Try to create bucket via Storage Provider API
+            create_url = f"{self.primary_sp}/greenfield/admin/v1/create-bucket"
+            
+            payload = {
+                'bucket_name': self.bucket_name,
+                'creator': self.account_address,
+                'visibility': 'VISIBILITY_TYPE_PUBLIC_READ',
+                'payment_address': self.account_address
+            }
+            
+            headers = {
+                'Content-Type': 'application/json',
+                'X-Gnfd-User-Address': self.account_address,
+                'X-Gnfd-App-Domain': 'scanchain.app'
+            }
+            
+            response = requests.post(
+                create_url,
+                json=payload,
+                headers=headers,
+                timeout=30
+            )
+            
+            if response.status_code in [200, 201, 202]:
+                print(f"   Bucket created successfully: {self.bucket_name}")
+            else:
+                print(f"   Bucket creation failed: {response.status_code}")
+                print(f"   Response: {response.text[:200]}")
+                print(f"   Will continue with mock storage")
+                
+        except Exception as e:
+            print(f"   Bucket creation error: {e}")
+            print(f"   Will continue with mock storage")
         
     def upload_file(self, file_data: bytes, filename: str, content_type: str) -> str:
         """Upload file to BNB Greenfield"""
@@ -126,49 +161,66 @@ class GreenfieldService:
         try:
             print(f"Trying PUT object upload...")
             
-            # Create upload URL
-            upload_url = f"{self.primary_sp}/greenfield/storage/v1/object/{self.bucket_name}/{object_name}"
+            # Try different Storage Provider endpoints
+            for sp_endpoint in self.sp_endpoints[:3]:  # Try first 3 SPs
+                try:
+                    upload_url = f"{sp_endpoint}/greenfield/storage/v1/object/{self.bucket_name}/{object_name}"
+                    
+                    from datetime import datetime, timedelta
+                    
+                    expiry = datetime.utcnow() + timedelta(seconds=300)
+                    
+                    headers = {
+                        'Content-Type': content_type,
+                        'Content-Length': str(len(file_data)),
+                        'X-Gnfd-Content-Sha256': file_hash,
+                        'X-Gnfd-User-Address': self.account_address,
+                        'X-Gnfd-App-Domain': 'scanchain.app',
+                        'X-Gnfd-Date': datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
+                        'X-Gnfd-Expiry-Timestamp': expiry.strftime('%Y-%m-%dT%H:%M:%SZ')
+                    }
+                    
+                    print(f"Uploading to: {upload_url}")
+                    
+                    response = requests.put(
+                        upload_url,
+                        data=file_data,
+                        headers=headers,
+                        timeout=60
+                    )
+                    
+                    print(f"PUT upload response ({sp_endpoint}): {response.status_code}")
+                    
+                    if response.status_code in [200, 201, 202]:
+                        greenfield_url = f"gnfd://{self.bucket_name}/{object_name}"
+                        print(f"PUT upload successful: {greenfield_url}")
+                        
+                        # Save backup locally
+                        self._save_backup(file_data, object_name, content_type, file_hash)
+                        
+                        return greenfield_url
+                    elif response.status_code == 404:
+                        print(f"Bucket not found on {sp_endpoint}")
+                        # Try to create bucket first, then retry upload
+                        if self._create_bucket_on_sp(sp_endpoint):
+                            print(f"Retrying upload after bucket creation...")
+                            response = requests.put(upload_url, data=file_data, headers=headers, timeout=60)
+                            if response.status_code in [200, 201, 202]:
+                                greenfield_url = f"gnfd://{self.bucket_name}/{object_name}"
+                                self._save_backup(file_data, object_name, content_type, file_hash)
+                                return greenfield_url
+                        continue
+                    else:
+                        print(f"PUT upload failed on {sp_endpoint}: {response.status_code}")
+                        print(f"Response: {response.text[:200]}")
+                        continue
+                        
+                except Exception as sp_error:
+                    print(f"PUT upload failed on {sp_endpoint}: {sp_error}")
+                    continue
             
-            # Create headers
-            headers = {
-                'Content-Type': content_type,
-                'Content-Length': str(len(file_data)),
-                'X-Gnfd-Content-Sha256': file_hash,
-                'X-Gnfd-User-Address': self.account_address,
-                'X-Gnfd-App-Domain': 'scanchain.app'
-            }
-            
-            # Add authentication if available
-            if self.private_key:
-                auth_headers = self._create_auth_headers('PUT', upload_url, file_data)
-                headers.update(auth_headers)
-            
-            print(f"Uploading to: {upload_url}")
-            print(f"Object: {object_name}")
-            print(f"Hash: {file_hash}")
-            
-            # Upload
-            response = requests.put(
-                upload_url,
-                data=file_data,
-                headers=headers,
-                timeout=60
-            )
-            
-            print(f"PUT upload response: {response.status_code}")
-            
-            if response.status_code in [200, 201, 202]:
-                greenfield_url = f"gnfd://{self.bucket_name}/{object_name}"
-                print(f"PUT upload successful: {greenfield_url}")
-                
-                # Save backup locally
-                self._save_backup(file_data, object_name, content_type, file_hash)
-                
-                return greenfield_url
-            else:
-                print(f"PUT upload failed: {response.status_code}")
-                print(f"Response: {response.text[:500]}")
-                return None
+            print("PUT upload failed on all Storage Providers")
+            return None
                 
         except Exception as e:
             print(f"PUT upload exception: {e}")
@@ -230,15 +282,44 @@ class GreenfieldService:
             print(f"Multipart upload exception: {e}")
             return None
     
+    def _create_bucket_on_sp(self, sp_endpoint: str) -> bool:
+        """Create bucket on specific Storage Provider"""
+        try:
+            create_url = f"{sp_endpoint}/greenfield/admin/v1/create-bucket"
+            
+            payload = {
+                'bucket_name': self.bucket_name,
+                'creator': self.account_address,
+                'visibility': 'VISIBILITY_TYPE_PUBLIC_READ',
+                'payment_address': self.account_address
+            }
+            
+            headers = {
+                'Content-Type': 'application/json',
+                'X-Gnfd-User-Address': self.account_address,
+                'X-Gnfd-App-Domain': 'scanchain.app'
+            }
+            
+            response = requests.post(create_url, json=payload, headers=headers, timeout=30)
+            return response.status_code in [200, 201, 202, 409]  # 409 = already exists
+            
+        except Exception as e:
+            print(f"Bucket creation failed on {sp_endpoint}: {e}")
+            return False
+    
     def _create_auth_headers(self, method: str, url: str, body: bytes) -> dict:
         """Create authentication headers for Greenfield API"""
         try:
-            timestamp = str(int(time.time()))
+            import time
+            from datetime import datetime, timedelta
             
-            # For now, return basic headers without signing
-            # In production, you would implement proper ECDSA signing here
+            # Current timestamp
+            now = datetime.utcnow()
+            expiry = now + timedelta(seconds=300)  # 5 minutes from now
+            
             return {
-                'X-Gnfd-Date': timestamp,
+                'X-Gnfd-Date': now.strftime('%Y-%m-%dT%H:%M:%SZ'),
+                'X-Gnfd-Expiry-Timestamp': expiry.strftime('%Y-%m-%dT%H:%M:%SZ'),
                 'X-Gnfd-User-Address': self.account_address,
                 'X-Gnfd-App-Domain': 'scanchain.app'
             }
