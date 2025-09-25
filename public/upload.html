@@ -144,6 +144,8 @@
         .form-control::placeholder {
             color: #cccccc;
         }
+        select.form-select option {
+        color: black; }
 
         .form-label {
             color: var(--bnb-yellow);
@@ -557,13 +559,15 @@
         }
 
         fileInput.addEventListener('change', (e) => {
-            console.log('File input change event triggered');
-            console.log('Files selected:', e.target.files);
-            if (e.target.files.length > 0) {
-                console.log('Handling file selection:', e.target.files[0]);
-                handleFileSelect(e.target.files[0]);
-            }
-        });
+        const browseBtn = document.getElementById('browseBtn');
+        console.log(browseBtn);
+        if (e.target.files.length > 0) {
+            const file = e.target.files[0];
+        // Update the button's HTML with a file icon and the file name
+            browseBtn.innerHTML = `<i class="fas fa-file-alt me-2"></i> ${file.name}`;
+        handleFileSelect(file);
+    }
+});
 
         function handleFileSelect(file) {
             // Validate file type
@@ -603,9 +607,12 @@
         }
 
         function clearFile() {
-            fileInput.value = '';
-            fileInfo.style.display = 'none';
-        }
+    const browseBtn = document.getElementById('browseBtn');
+    fileInput.value = '';
+    fileInfo.style.display = 'none';
+    // Reset the button's HTML to its original state
+    browseBtn.innerHTML = `<i class="fas fa-folder-open me-2"></i>Browse Files`;
+}
 
         function resetForm() {
             uploadForm.reset();

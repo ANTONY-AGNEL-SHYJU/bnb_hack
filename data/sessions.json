@@ -281,7 +281,21 @@
       "email": "manufacturer@techcorp.com",
       "loginTime": "2025-08-07T14:05:08.858804",
       "lastActivity": "2025-08-07T14:05:08.858804"
+    },
+    {
+      "id": 1,
+      "userId": 1,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoibWFudWZhY3R1cmVyQHRlY2hjb3JwLmNvbSIsInJvbGUiOiJtYW51ZmFjdHVyZXIiLCJpYXQiOjE3NTg3ODU2NTMsImV4cCI6MTc1ODg3MjA1M30.K9m37BEaU1VgJFoux0NNsOxOz89FVWmy92laJLBAlOc",
+      "createdAt": "2025-09-25T07:34:13.169Z",
+      "expiresAt": "2025-09-26T07:34:13.169Z",
+      "active": true
+    },
+    {
+      "userId": 1,
+      "email": "manufacturer@techcorp.com",
+      "loginTime": "2025-09-25T13:15:33.876538",
+      "lastActivity": "2025-09-25T13:15:33.876550"
     }
   ],
-  "lastSessionId": 0
+  "lastSessionId": 1
 }
