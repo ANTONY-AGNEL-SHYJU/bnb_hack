@@ -189,7 +189,25 @@
         "totalScans": 0,
         "joinedAt": "2025-07-19T22:10:15.626118"
       }
+    },
+    {
+      "id": 7,
+      "username": "techmanofficial123",
+      "email": "techmanofficial123@gmail.com",
+      "password": "$2b$12$NbtnIUYfE3tQ6OINA5ztIOuWg3Z4f4bhJ2n3BOcNOt2G2zBtH9yDW",
+      "fullName": "Demo person",
+      "role": "manufacturer",
+      "companyName": "ABC Company pvt ltd",
+      "verified": true,
+      "createdAt": "2025-09-25T19:39:52.581869",
+      "lastLogin": "2025-09-25T19:40:13.186597",
+      "blockchainHashes": [],
+      "profileData": {
+        "totalBatches": 0,
+        "totalScans": 0,
+        "joinedAt": "2025-09-25T19:39:52.581880"
+      }
     }
   ],
-  "lastUserId": 6
+  "lastUserId": 7
 }

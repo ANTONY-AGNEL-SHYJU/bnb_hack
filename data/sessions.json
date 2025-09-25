@@ -295,6 +295,12 @@
       "email": "manufacturer@techcorp.com",
       "loginTime": "2025-09-25T13:15:33.876538",
       "lastActivity": "2025-09-25T13:15:33.876550"
+    },
+    {
+      "userId": 7,
+      "email": "techmanofficial123@gmail.com",
+      "loginTime": "2025-09-25T19:40:13.187155",
+      "lastActivity": "2025-09-25T19:40:13.187162"
     }
   ],
   "lastSessionId": 1

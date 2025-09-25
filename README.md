@@ -13,10 +13,10 @@ ScanChain is a blockchain-based product authenticity verification system built o
 
 ## 🛠️ Tech Stack
 
-- **Backend**: Node.js with Express.js
+- **Backend**: Python with Flask
 - **Blockchain**: BNB Smart Chain (BSC) Testnet
 - **Storage**: BNB Greenfield Testnet
-- **Hashing**: SHA-256 via crypto-js
+- **Hashing**: SHA-256 via hashlib
 - **QR Codes**: qrcode library
 - **Smart Contract**: Solidity
 
@@ -24,8 +24,8 @@ ScanChain is a blockchain-based product authenticity verification system built o
 
 Before running this project, ensure you have:
 
-- Node.js (v16 or later)
-- npm or yarn
+- Python (v3.8 or later)
+- pip
 - BSC Testnet account with test BNB
 - BNB Greenfield Testnet account
 - Git
@@ -36,8 +36,8 @@ Before running this project, ensure you have:
 
 ```bash
 git clone <your-repo-url>
-cd BNB_Hackethon
-npm install
+cd bnb_hack
+uv sync
 ```
 
 ### 2. Environment Setup
@@ -71,13 +71,7 @@ GREENFIELD_CHAIN_ID=5600
 
 ### 3. Deploy Smart Contract
 
-Run the deployment guide:
-
-```bash
-npm run deploy-info
-```
-
-Deploy the contract using Remix IDE or Hardhat:
+Deploy the contract using Remix IDE:
 - Contract code: `contracts/ProductAuthenticity.sol`
 - Network: BSC Testnet (Chain ID: 97)
 - Update `CONTRACT_ADDRESS` in `.env` after deployment
@@ -85,18 +79,18 @@ Deploy the contract using Remix IDE or Hardhat:
 ### 4. Run Tests
 
 ```bash
-npm test
+uv run python test_app.py
 ```
 
 ### 5. Start Server
 
 ```bash
-npm start
-# or for development
-npm run dev
+uv run python app.py
+# or
+uv run python run.py
 ```
 
-The server will start on `http://localhost:3000`
+The server will start on `http://localhost:5000`
 
 ## 📡 API Endpoints
 
@@ -189,26 +183,26 @@ POST /api/qr/scan
 ## 🏗️ Project Structure
 
 ```
-BNB_Hackethon/
+bnb_hack/
 ├── contracts/
 │   └── ProductAuthenticity.sol      # Smart contract
 ├── services/
-│   ├── greenfieldService.js         # BNB Greenfield integration
-│   ├── blockchainService.js         # BSC integration
-│   └── qrService.js                 # QR code utilities
-├── middleware/
-│   ├── validation.js                # Request validation
-│   └── errorHandler.js              # Global error handling
+│   ├── greenfield_service.py        # BNB Greenfield integration
+│   ├── blockchain_service.py        # BSC integration
+│   ├── qr_service.py                # QR code utilities
+│   ├── auth_service.py              # Authentication service
+│   └── database_service.py          # Database operations
 ├── routes/
-│   └── qr.js                        # QR code routes
-├── scripts/
-│   ├── deploy.js                    # Deployment guide
-│   └── test.js                      # Test suite
-├── utils/
-│   └── index.js                     # Utility functions
-├── server.js                        # Main server file
-├── package.json
-├── .env.example
+│   └── auth_routes.py               # Authentication routes
+├── public/
+│   ├── *.html                       # Frontend files
+├── data/
+│   └── *.json                       # Data storage files
+├── app.py                           # Main Flask application
+├── run.py                           # Server runner
+├── test_app.py                      # Test suite
+├── requirements.txt                 # Python dependencies
+├── .env
 └── README.md
 ```
 
@@ -240,16 +234,15 @@ The `ProductAuthenticity.sol` contract provides:
 Run the test suite to verify functionality:
 
 ```bash
-npm test
+uv run python test_app.py
 ```
 
 This will test:
+- Environment variables
+- Python dependencies
 - Hash generation
-- Product ID generation
-- Address validation
-- File type validation
-- QR code generation/parsing
-- Environment variable setup
+- JSON processing
+- Service availability
 
 ## 🔒 Security Features
 
