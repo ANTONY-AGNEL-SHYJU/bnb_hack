@@ -251,8 +251,29 @@
         "uploadedBy": 1,
         "uploadedAt": "2025-09-25T21:07:56.127110"
       }
+    },
+    {
+      "productId": "Batch 56",
+      "userId": 1,
+      "userEmail": "manufacturer@techcorp.com",
+      "batchName": "Batch no 5",
+      "manufacturerName": "Antony ",
+      "productType": "Pharmaceuticals",
+      "description": "Smthng",
+      "fileHash": "1cd77c1e34108988ff696202a4741c4c50ab0d8de287d4a904ef0dd6063ccfd2",
+      "greenfieldUrl": "gnfd://bnbhack1/Batch 56-1758820364.pdf",
+      "txHash": "0xbc5680517333e2377ff0fb577fcb7d1d2016f293b955cd8c40d735db23b68837",
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "createdAt": "2025-09-25T22:42:44.736719",
+      "metadata": {
+        "fileName": "DSLD E-2.pdf",
+        "fileSize": 4919713,
+        "mimeType": "application/pdf",
+        "uploadedBy": 1,
+        "uploadedAt": "2025-09-25T22:42:44.736068"
+      }
     }
   ],
   "metadata": [],
-  "lastProductId": 12
+  "lastProductId": 13
 }

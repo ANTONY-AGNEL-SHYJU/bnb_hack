@@ -707,6 +707,10 @@ def serve_auth_test():
 def serve_simple_auth_test():
     return send_from_directory('public', 'simple-auth-test.html')
 
+@app.route('/qr-test')
+def serve_qr_test():
+    return send_from_directory('public', 'qr-test.html')
+
 # Serve static files
 @app.route('/<path:filename>')
 def serve_static(filename):

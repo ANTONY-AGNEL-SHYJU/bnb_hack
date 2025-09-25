@@ -10,7 +10,7 @@
       "companyName": "TechCorp Industries",
       "verified": true,
       "createdAt": "2025-07-19T11:59:39.793Z",
-      "lastLogin": "2025-09-25T20:33:32.314981",
+      "lastLogin": "2025-09-25T22:39:43.693771",
       "blockchainHashes": [
         {
           "batchId": "123456",
@@ -38,10 +38,19 @@
           "blockNumber": null,
           "productName": "Batch-4",
           "timestamp": "2025-09-25T21:07:56.128159"
+        },
+        {
+          "batchId": "Batch 56",
+          "fileHash": "1cd77c1e34108988ff696202a4741c4c50ab0d8de287d4a904ef0dd6063ccfd2",
+          "txHash": "0xbc5680517333e2377ff0fb577fcb7d1d2016f293b955cd8c40d735db23b68837",
+          "contractAddress": "0x0000000000000000000000000000000000000000",
+          "blockNumber": null,
+          "productName": "Batch no 5",
+          "timestamp": "2025-09-25T22:42:44.737136"
         }
       ],
       "profileData": {
-        "totalBatches": 3,
+        "totalBatches": 4,
         "totalScans": 0,
         "joinedAt": "2025-07-19T11:59:39.793Z"
       }
@@ -56,7 +65,7 @@
       "companyName": "Global Logistics Inc",
       "verified": true,
       "createdAt": "2025-07-19T11:59:40.055Z",
-      "lastLogin": "2025-09-25T22:37:38.912838",
+      "lastLogin": "2025-09-25T22:40:26.640474",
       "blockchainHashes": [],
       "profileData": {
         "totalBatches": 0,

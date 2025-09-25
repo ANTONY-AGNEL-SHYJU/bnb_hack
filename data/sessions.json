@@ -337,6 +337,18 @@
       "email": "supplier@logistics.com",
       "loginTime": "2025-09-25T22:37:38.913411",
       "lastActivity": "2025-09-25T22:37:38.913415"
+    },
+    {
+      "userId": 1,
+      "email": "manufacturer@techcorp.com",
+      "loginTime": "2025-09-25T22:39:43.694343",
+      "lastActivity": "2025-09-25T22:39:43.694349"
+    },
+    {
+      "userId": 2,
+      "email": "supplier@logistics.com",
+      "loginTime": "2025-09-25T22:40:26.641092",
+      "lastActivity": "2025-09-25T22:40:26.641097"
     }
   ],
   "lastSessionId": 1

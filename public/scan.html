@@ -146,7 +146,7 @@
             <!-- QR Scanner -->
             <div class="text-center mb-4">
                 <div class="qr-scanner" id="qrScanner">
-                    <video id="qrVideo" style="width: 100%; max-width: 400px; height: 300px; display: none;"></video>
+                    <video id="qrVideo" style="width: 100%; max-width: 400px; height: 300px; display: none;" playsinline></video>
                     <div id="qrPlaceholder" class="py-5">
                         <i class="fas fa-qrcode fa-4x text-warning mb-3"></i>
                         <h4>Scan QR Code</h4>
@@ -154,6 +154,12 @@
                         <button class="btn btn-primary" onclick="startQRScanner()">
                             <i class="fas fa-camera me-2"></i>Start Camera
                         </button>
+                        <button class="btn btn-outline-light ms-2" onclick="stopQRScanner()" style="display: none;" id="stopBtn">
+                            <i class="fas fa-stop me-2"></i>Stop Camera
+                        </button>
+                    </div>
+                    <div id="scanStatus" class="mt-2" style="display: none;">
+                        <small class="text-muted">Scanning for QR codes...</small>
                     </div>
                 </div>
             </div>
@@ -283,18 +289,45 @@
                 const video = document.getElementById('qrVideo');
                 const placeholder = document.getElementById('qrPlaceholder');
                 
-                qrStream = await navigator.mediaDevices.getUserMedia({ 
-                    video: { facingMode: 'environment' } 
-                });
+                // Try with environment camera first, fallback to any camera
+                let constraints = { video: { facingMode: 'environment' } };
+                
+                try {
+                    qrStream = await navigator.mediaDevices.getUserMedia(constraints);
+                } catch (envError) {
+                    console.log('Environment camera not available, trying any camera');
+                    constraints = { video: true };
+                    qrStream = await navigator.mediaDevices.getUserMedia(constraints);
+                }
                 
                 video.srcObject = qrStream;
-                video.play();
                 
-                placeholder.style.display = 'none';
-                video.style.display = 'block';
-                
-                isScanning = true;
-                scanQRCode();
+                // Wait for video to be fully loaded before starting scan
+                video.onloadedmetadata = () => {
+                    console.log('Video metadata loaded');
+                    video.play().then(() => {
+                        console.log('Video playing, dimensions:', video.videoWidth, 'x', video.videoHeight);
+                        placeholder.style.display = 'none';
+                        video.style.display = 'block';
+                        document.getElementById('stopBtn').style.display = 'inline-block';
+                        document.getElementById('scanStatus').style.display = 'block';
+                        
+                        // Wait a bit more for video dimensions to be available
+                        setTimeout(() => {
+                            if (video.videoWidth > 0 && video.videoHeight > 0) {
+                                console.log('Starting QR scan with dimensions:', video.videoWidth, 'x', video.videoHeight);
+                                isScanning = true;
+                                scanQRCode();
+                            } else {
+                                console.error('Video dimensions still 0 after timeout');
+                                showAlert('warning', 'Video not ready, please try again');
+                            }
+                        }, 1000);
+                    }).catch(playError => {
+                        console.error('Video play error:', playError);
+                        showAlert('danger', 'Failed to start video: ' + playError.message);
+                    });
+                };
                 
             } catch (error) {
                 console.error('Camera access error:', error);
@@ -303,6 +336,8 @@
         }
 
         function stopQRScanner() {
+            console.log('Stopping QR scanner');
+            
             if (qrStream) {
                 qrStream.getTracks().forEach(track => track.stop());
                 qrStream = null;
@@ -315,28 +350,59 @@
             
             video.style.display = 'none';
             placeholder.style.display = 'block';
+            document.getElementById('stopBtn').style.display = 'none';
+            document.getElementById('scanStatus').style.display = 'none';
         }
 
         function scanQRCode() {
             if (!isScanning) return;
             
             const video = document.getElementById('qrVideo');
-            const canvas = document.createElement('canvas');
-            const context = canvas.getContext('2d');
             
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
-            context.drawImage(video, 0, 0, canvas.width, canvas.height);
-            
-            const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-            const code = jsQR(imageData.data, imageData.width, imageData.height);
-            
-            if (code) {
-                stopQRScanner();
-                processQRData(code.data);
+            // Check if video is ready and has valid dimensions
+            if (!video || video.videoWidth === 0 || video.videoHeight === 0 || video.readyState < 2) {
+                requestAnimationFrame(scanQRCode);
+                return;
             }
             
-            setTimeout(scanQRCode, 100);
+            try {
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+                
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                
+                // Ensure canvas has valid dimensions
+                if (canvas.width === 0 || canvas.height === 0) {
+                    requestAnimationFrame(scanQRCode);
+                    return;
+                }
+                
+                context.drawImage(video, 0, 0, canvas.width, canvas.height);
+                const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+                
+                if (typeof jsQR !== 'undefined') {
+                    const code = jsQR(imageData.data, imageData.width, imageData.height);
+                    
+                    if (code) {
+                        console.log('QR Code detected:', code.data);
+                        stopQRScanner();
+                        processQRData(code.data);
+                        return;
+                    }
+                } else {
+                    console.error('jsQR library not loaded');
+                    showAlert('danger', 'QR scanner library not loaded');
+                    return;
+                }
+                
+            } catch (error) {
+                console.error('Scanning error:', error);
+                // Don't show alert for every scan error, just log it
+            }
+            
+            // Continue scanning
+            requestAnimationFrame(scanQRCode);
         }
 
         function showManualEntry() {
@@ -354,17 +420,31 @@
 
         function processQRData(qrData) {
             try {
-                scannedQRData = typeof qrData === 'string' ? JSON.parse(qrData) : qrData;
+                console.log('Processing QR data:', qrData);
+                
+                // Try to parse as JSON
+                if (typeof qrData === 'string') {
+                    try {
+                        scannedQRData = JSON.parse(qrData);
+                    } catch (parseError) {
+                        // If not JSON, treat as plain text (maybe it's just a product ID)
+                        scannedQRData = { productId: qrData };
+                    }
+                } else {
+                    scannedQRData = qrData;
+                }
                 
                 if (!scannedQRData.productId) {
                     throw new Error('Invalid QR code: missing product ID');
                 }
                 
+                console.log('Parsed QR data:', scannedQRData);
                 showAlert('success', 'QR Code scanned successfully!');
                 document.getElementById('supplierForm').style.display = 'block';
                 document.getElementById('manualEntryForm').style.display = 'none';
                 
             } catch (error) {
+                console.error('QR processing error:', error);
                 showAlert('danger', 'Invalid QR code format: ' + error.message);
             }
         }
